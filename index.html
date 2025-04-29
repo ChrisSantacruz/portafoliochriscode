@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="es" data-language="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChrisCode Portfolio</title>
+    <meta name="description" content="Portfolio de Christian Santacruz, desarrollador especializado en frontend, backend y desarrollo móvil. Conoce mis proyectos y habilidades.">
+    <meta name="keywords" content="Christian Santacruz, portfolio, desarrollador, frontend, backend, móvil, proyectos, habilidades">
+    <meta name="author" content="Christian Santacruz">
+    <link rel="icon" type="image/png" href="images/logo-c.png">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Pantalla de carga -->
+    <div id="loading-screen">
+        <canvas id="loading-matrix"></canvas>
+        <div class="loading-content">
+            <img src="images/logo-c.png" alt="Logo C" class="loading-logo">
+            <img src="images/chriscode-text.png" alt="ChrisCode" class="loading-text">
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Fondo de galaxia -->
+    <canvas id="galaxy-background"></canvas>
+    
+    <!-- Efecto Matrix -->
+    <canvas id="matrix-effect"></canvas>
+    
+    <!-- Contenido principal -->
+    <div class="container">
+        <!-- Navegación -->
+        <nav>
+            <div class="nav-content">
+                <div class="logo">
+                    <img src="images/chriscode-text.png" alt="ChrisCode" class="logo-image">
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" data-i18n="nav.home">Inicio</a></li>
+                    <li><a href="#about" data-i18n="nav.about">Sobre Mí</a></li>
+                    <li><a href="#projects" data-i18n="nav.projects">Proyectos</a></li>
+                    <li><a href="#contact" data-i18n="nav.contact">Contacto</a></li>
+                    <li class="language-selector">
+                        <button id="language-toggle">
+                            <i class="fas fa-globe"></i>
+                            <span id="current-language">ES</span>
+                        </button>
+                    </li>
+                </ul>
+                <div class="menu-toggle">
+                    <i class="fas fa-bars"></i>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Sección de Nombre y Foto -->
+        <section id="home" class="section hero-section">
+            <div class="hero-content">
+                <div class="profile-image">
+                    <div class="image-container">
+                        <img src="Proyectos/Imagen1.png?height=300&width=300" alt="Foto de Christian Santacruz">
+                    </div>
+                </div>
+                <div class="hero-text">
+                    <h1>Christian Santacruz</h1>
+                    <div class="typing-container">
+                        <span class="dynamic-text" id="typing-text"></span>
+                        <span class="cursor">|</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/ChrisCodeX1" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://linkedin.com/in/christiansantacruz" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://twitter.com/ChrisCodeX1" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="mailto:contact@christiansantacruz.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección Sobre Mí -->
+        <section id="about" class="section about-section">
+            <div class="section-header">
+                <h2 data-i18n="about.title">Sobre Mí</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="Proyectos/about.png?height=500&width=400" alt="Foto profesional de Christian Santacruz">
+                </div>
+                <div class="about-text-card">
+                    <p data-i18n="about.p1">Christian Santacruz es un desarrollador experimentado especializado en frontend, backend y desarrollo móvil. Con fuertes habilidades técnicas y experiencia en varios frameworks, se destaca en la construcción de aplicaciones Web y móviles eficientes.</p>
+                    
+                    <p data-i18n="about.p2">Christian es también un líder natural, conocido por su mentalidad colaborativa, su capacidad para resolver problemas y su eficaz gestión del tiempo. Su dedicación al aprendizaje continuo y la innovación lo convierten en un jugador de equipo fiable y adaptable.</p>
+                    
+                    <div class="tech-categories">
+                        <div class="tech-category">
+                            <h3>Frontend</h3>
+                            <div class="tech-grid">
+                                <div class="tech-item" title="HTML5">
+                                    <i class="fab fa-html5"></i>
+                                    <span>HTML5</span>
+                                </div>
+                                <div class="tech-item" title="CSS3">
+                                    <i class="fab fa-css3-alt"></i>
+                                    <span>CSS3</span>
+                                </div>
+                                <div class="tech-item" title="JavaScript">
+                                    <i class="fab fa-js"></i>
+                                    <span>JavaScript</span>
+                                </div>
+                                <div class="tech-item" title="TypeScript">
+                                    <i class="fab fa-js"></i>
+                                    <span>TypeScript</span>
+                                </div>
+                                <div class="tech-item" title="Angular">
+                                    <i class="fab fa-angular"></i>
+                                    <span>Angular</span>
+                                </div>
+                                <div class="tech-item" title="React">
+                                    <i class="fab fa-react"></i>
+                                    <span>React</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h3>Backend</h3>
+                            <div class="tech-grid">
+                                <div class="tech-item" title="Node.js">
+                                    <i class="fab fa-node-js"></i>
+                                    <span>Node.js</span>
+                                </div>
+                                <div class="tech-item" title="Express">
+                                    <i class="fab fa-node-js"></i>
+                                    <span>Express</span>
+                                </div>
+                                <div class="tech-item" title="NestJS">
+                                    <i class="fab fa-node-js"></i>
+                                    <span>NestJS</span>
+                                </div>
+                                <div class="tech-item" title="Java">
+                                    <i class="fab fa-java"></i>
+                                    <span>Java</span>
+                                </div>
+                                <div class="tech-item" title="Spring Boot">
+                                    <i class="fab fa-java"></i>
+                                    <span>Spring Boot</span>
+                                </div>
+                                <div class="tech-item" title="Python">
+                                    <i class="fab fa-python"></i>
+                                    <span>Python</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h3>Bases de Datos</h3>
+                            <div class="tech-grid">
+                                <div class="tech-item" title="MySQL">
+                                    <i class="fas fa-database"></i>
+                                    <span>MySQL</span>
+                                </div>
+                                <div class="tech-item" title="MongoDB">
+                                    <i class="fas fa-database"></i>
+                                    <span>MongoDB</span>
+                                </div>
+                                <div class="tech-item" title="PostgreSQL">
+                                    <i class="fas fa-database"></i>
+                                    <span>PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="tech-category">
+                            <h3>Desarrollo Móvil</h3>
+                            <div class="tech-grid">
+                                <div class="tech-item" title="Flutter">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Flutter</span>
+                                </div>
+                                <div class="tech-item" title="React Native">
+                                    <i class="fab fa-react"></i>
+                                    <span>React Native</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p data-i18n="about.p3"></p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Proyectos -->
+        <section id="projects" class="section projects-section">
+            <div class="section-header">
+                <h2 data-i18n="projects.title">Mis Proyectos</h2>
+                <div class="underline"></div>
+            </div>
+            
+            <div class="projects-filter">
+                <button class="filter-btn active" data-filter="all" data-i18n="projects.filter.all">Todos</button>
+                <button class="filter-btn" data-filter="web" data-i18n="projects.filter.web">Web</button>
+                <button class="filter-btn" data-filter="mobile" data-i18n="projects.filter.mobile">Mobile</button>
+                <button class="filter-btn" data-filter="backend" data-i18n="projects.filter.backend">Backend</button>
+                <button class="filter-btn" data-filter="fullstack" data-i18n="projects.filter.fullstack">Full Stack</button>
+            </div>
+            
+            <div class="projects-grid" id="projects-grid">
+                <!-- Los proyectos se cargarán dinámicamente con JavaScript -->
+            </div>
+            
+            <div class="projects-pagination">
+                <button id="load-more-btn" class="btn btn-filled" data-i18n="projects.loadMore">Cargar Más Proyectos</button>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contact" class="section contact-section">
+            <div class="section-header">
+                <h2 data-i18n="contact.title">Contacto</h2>
+                <div class="underline"></div>
+            </div>
+            <div class="contact-content">
+                <div class="contact-text">
+                    <h3 data-i18n="contact.subtitle">¿Interesado en trabajar juntos?</h3>
+                    <p data-i18n="contact.description">Estoy abierto a oportunidades de trabajo freelance, colaboraciones y posiciones a tiempo completo. Si tienes un proyecto en mente o simplemente quieres conectar, ¡no dudes en contactarme!</p>
+                    
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Colombia</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contact@christiansantacruz.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-telegram"></i>
+                            <span><a href="https://t.me/ChrisCodeX1" target="_blank">@ChrisCodeX1</a></span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fab fa-github"></i>
+                            <span><a href="https://github.com/ChrisCodeX1" target="_blank">github.com/ChrisCodeX1</a></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="images/chriscode-text.png" alt="ChrisCode" class="logo-image">
+                </div>
+                <div class="footer-links">
+                    <a href="#home" data-i18n="nav.home">Inicio</a>
+                    <a href="#about" data-i18n="nav.about">Sobre Mí</a>
+                    <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+                    <a href="#contact" data-i18n="nav.contact">Contacto</a>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/ChrisCodeX1" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/christiansantacruz" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://twitter.com/ChrisCodeX1" target="_blank" class="social-icon"><i class="fab fa-twitter"></i></a>
+                    <a href="mailto:contact@christiansantacruz.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+                </div>
+                <div class="footer-copyright">
+                    <p>&copy; 2025 Christian Santacruz. <span data-i18n="footer.rights">Todos los derechos reservados.</span></p>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <!-- Modal de Galería -->
+    <div id="gallery-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <h2 id="modal-title">Galería de Proyecto</h2>
+            <div class="gallery-container">
+                <div class="gallery-main">
+                    <img id="gallery-main-image" src="/placeholder.svg" alt="Imagen principal">
+                </div>
+                <div class="gallery-thumbnails" id="gallery-thumbnails">
+                    <!-- Las miniaturas se cargarán dinámicamente con JavaScript -->
+                </div>
+            </div>
+            <div class="gallery-description" id="gallery-description">
+                <!-- La descripción se cargarán dinámicamente con JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
