@@ -305,6 +305,89 @@ const projectsData = [
       githubUrl: "https://github.com/ChrisCodeX1/Social-Dashboard",
     },
   ]
+
+  const featuredProjectsData = [
+    {
+      id: "featured1",
+      title: "Andino Express",
+      description:
+        "Marketplace multiperfil construido con arquitectura MERN para conectar compradores y comerciantes en Colombia. Incluye autenticación con verificación por email, gestión de inventario, seguimiento de pedidos, sistema de reseñas y pagos seguros con Wompi.",
+      image: "Proyectos Destacados/Andino Express logo.jpg",
+      tech: ["React", "TypeScript", "Node.js", "Express", "MongoDB", "Wompi"],
+      githubUrl: "https://github.com/ChrisSantacruz/ComercializadoraSPG",
+      liveUrl: "https://andinoexpress.com",
+    },
+    {
+      id: "featured2",
+      title: "Bot Microtrading",
+      description:
+        "Bot profesional para operaciones en Pump.fun con enfoque en ejecución de bundles atómicos usando Jito, Address Lookup Tables y simulación previa. Diseñado para optimización de capital, slippage dinámico y monitoreo en tiempo real.",
+      image: "Proyectos Destacados/Bot Microtrading logo.webp",
+      tech: ["TypeScript", "Node.js", "Solana", "Jito Bundles", "Web3"],
+      githubUrl: "https://github.com/ChrisSantacruz/BotMicroTrading",
+    },
+    {
+      id: "featured3",
+      title: "Bot Telegram/X",
+      description:
+        "Suite de automatización con dos implementaciones (Python y Node.js) para integración con Telegram y publicación en X (Twitter). Incluye comandos, monitoreo, scripts auxiliares y flujo de trabajo n8n para orquestación.",
+      image: "Proyectos Destacados/Bot TelegramX logo.png",
+      tech: ["Python", "Node.js", "Telegram Bot API", "X API", "n8n"],
+      githubUrl: "https://github.com/ChrisSantacruz/Bot-Telegram-X",
+    },
+    {
+      id: "featured4",
+      title: "MishiGPT",
+      description:
+        "Aplicación móvil para niños con un gatito virtual impulsado por IA. Combina chat contextual, interacción por voz (STT/TTS), sistema de estados de mascota y salvaguardas de contenido, con backend en Supabase e integración con Groq.",
+      image: "Proyectos Destacados/Mishigpt logo.jpg",
+      galleryImages: [
+        { src: "Proyectos Destacados/Mishigpt logo.jpg", alt: "Logo de MishiGPT" },
+        { src: "Proyectos Destacados/login mishigpt.jpg", alt: "Pantalla de inicio de sesión" },
+        { src: "Proyectos Destacados/register mishigpt.jpg", alt: "Pantalla de registro" },
+        { src: "Proyectos Destacados/Chat mishigpt.jpg", alt: "Chat de MishiGPT" },
+      ],
+      isCarousel: true,
+      tech: ["Flutter", "Dart", "Supabase", "Groq", "Riverpod"],
+      githubUrl: "https://github.com/ChrisSantacruz/MishiGPT---Version-Alpha",
+    },
+    {
+      id: "featured5",
+      title: "Selectify",
+      description:
+        "Plataforma de reclutamiento con IA basada en arquitectura modular. Integra backend sobre Supabase, frontend en Next.js, workflows de n8n y componentes de evaluación inteligente para automatizar postulación, entrevistas y scoring de candidatos.",
+      image: "Proyectos Destacados/entrevista logo.png",
+      galleryImages: [
+        { src: "Proyectos Destacados/entrevista logo.png", alt: "Logo de Selectify" },
+        { src: "Proyectos Destacados/selectify1.jpeg", alt: "Dashboard de candidatos" },
+        { src: "Proyectos Destacados/selectify2.jpeg", alt: "Panel del candidato" },
+        { src: "Proyectos Destacados/selectify3.jpeg", alt: "Gestión de cargos con IA" },
+        { src: "Proyectos Destacados/selectify4.jpeg", alt: "Vista general del dashboard" },
+      ],
+      isCarousel: true,
+      tech: ["Next.js", "TypeScript", "Node.js", "PostgreSQL", "Supabase", "n8n"],
+      githubUrl: "https://github.com/ChrisSantacruz/Hackaton_TribuIA",
+    },
+    {
+      id: "featured6",
+      title: "Hospital Infantil",
+      description:
+        "Sitio arquitectónico con asistente IA integrado para consultas técnicas del proyecto. Implementado con Next.js y backend Express, incorpora lectura automática de PDFs y respuestas contextuales con Groq para apoyar presupuestos, materiales y cronogramas.",
+      image: "Proyectos Destacados/hospital infantil.png",
+      tech: ["Next.js", "TypeScript", "Express", "Groq", "Tailwind CSS"],
+      githubUrl: "https://github.com/ChrisSantacruz/Hospital-Infantil",
+      liveUrl: "https://hospital-infantil-kappa.vercel.app/",
+    },
+    {
+      id: "featured7",
+      title: "Jarvis",
+      description:
+        "Proyecto de IA conversacional orientado a su despliegue como skill de Alexa. Incluye arquitectura para entrenamiento de modelo, exposición de endpoints backend y flujo de integración con intents para interacción por voz.",
+      image: "Proyectos Destacados/jarvis logo.png",
+      tech: ["TypeScript", "NestJS", "Alexa Skills", "AI"],
+      githubUrl: "https://github.com/ChrisSantacruz/Jarvis",
+    },
+  ]
   
   // Traducciones para el sitio
   const translations = {
@@ -313,6 +396,7 @@ const projectsData = [
         home: "Inicio",
         about: "Sobre Mí",
         projects: "Proyectos",
+        featured: "Destacados",
         contact: "Contacto",
       },
       about: {
@@ -332,6 +416,12 @@ const projectsData = [
         },
         loadMore: "Cargar Más Proyectos",
       },
+      featured: {
+        title: "Proyectos Destacados",
+        subtitle: "Selección de productos con alto impacto técnico y de negocio.",
+        viewAll: "Ver todos",
+        viewLess: "Ver menos",
+      },
       contact: {
         title: "Contacto",
         subtitle: "¿Interesado en trabajar juntos?",
@@ -347,6 +437,7 @@ const projectsData = [
         home: "Home",
         about: "About Me",
         projects: "Projects",
+        featured: "Featured",
         contact: "Contact",
       },
       about: {
@@ -364,6 +455,12 @@ const projectsData = [
           fullstack: "Full Stack",
         },
         loadMore: "Load More Projects",
+      },
+      featured: {
+        title: "Featured Projects",
+        subtitle: "A curated selection of products with strong technical and business impact.",
+        viewAll: "View all",
+        viewLess: "View less",
       },
       contact: {
         title: "Contact",
@@ -392,6 +489,7 @@ const projectsData = [
       initGalleryModal()
       initProjects()
       initProjectFilters()
+      initFeaturedProjects()
       initLanguageToggle()
   
       // Ocultar pantalla de carga después de inicializar todo
@@ -502,6 +600,7 @@ const projectsData = [
   
       // Actualizar todos los textos
       updateTexts(newLang)
+      initFeaturedProjects()
     })
   
     // Inicializar textos con el idioma actual
@@ -863,19 +962,34 @@ const projectsData = [
           ? event.target
           : event.target.closest(".btn-gallery")
         const projectId = button.getAttribute("data-project")
-        const project = projectsData.find((p) => p.id === projectId)
-  
+
+        let project = projectsData.find((p) => p.id === projectId)
+        let images
+        let description
+
         if (project) {
+          images = project.images
+          description = project.detailedDescription
+        } else {
+          const featuredProject = featuredProjectsData.find((p) => p.id === projectId)
+          if (featuredProject) {
+            project = featuredProject
+            images = featuredProject.galleryImages || [{ src: featuredProject.image, alt: featuredProject.title }]
+            description = featuredProject.description
+          }
+        }
+
+        if (project && images) {
           // Establecer título
           modalTitle.textContent = `Galería: ${project.title}`
   
           // Establecer imagen principal
-          mainImage.src = project.images[0].src
-          mainImage.alt = project.images[0].alt
+          mainImage.src = images[0].src
+          mainImage.alt = images[0].alt
   
           // Limpiar y crear miniaturas
           thumbnailsContainer.innerHTML = ""
-          project.images.forEach((image, index) => {
+          images.forEach((image, index) => {
             const thumbnail = document.createElement("div")
             thumbnail.className = `gallery-thumbnail ${index === 0 ? "active" : ""}`
             thumbnail.innerHTML = `<img src="${image.src}" alt="${image.alt}">`
@@ -896,7 +1010,7 @@ const projectsData = [
           })
   
           // Establecer descripción
-          galleryDescription.textContent = project.detailedDescription
+          galleryDescription.textContent = description
   
           // Mostrar modal
           modal.style.display = "block"
@@ -1074,5 +1188,42 @@ const projectsData = [
         loadMoreBtn.style.display = "block"
       }
     }
+  }
+
+  function initFeaturedProjects() {
+    const featuredGrid = document.getElementById("featured-projects-grid")
+    if (!featuredGrid) return
+
+    const currentLanguage = document.documentElement.getAttribute("data-language") || "es"
+    const codeLabel = currentLanguage === "en" ? "View Code" : "Ver Código"
+    const visitLabel = currentLanguage === "en" ? "Visit Site" : "Visitar Sitio"
+    const galleryLabel = currentLanguage === "en" ? "Gallery" : "Galería"
+
+    featuredGrid.innerHTML = ""
+
+    featuredProjectsData.forEach((project) => {
+      const hasGallery = project.galleryImages && project.galleryImages.length > 1
+
+      const card = document.createElement("article")
+      card.className = "featured-project-card"
+      card.innerHTML = `
+        <div class="featured-media">
+          <img src="${project.image}" alt="${project.title}">
+        </div>
+        <div class="featured-content">
+          <h3>${project.title}</h3>
+          <p>${project.description}</p>
+          <div class="featured-tech">
+            ${project.tech.map((tech) => `<span>${tech}</span>`).join("")}
+          </div>
+          <div class="featured-actions">
+            <a href="${project.githubUrl}" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> ${codeLabel}</a>
+            ${project.liveUrl ? `<a href="${project.liveUrl}" target="_blank" class="btn btn-filled"><i class="fas fa-arrow-up-right-from-square"></i> ${visitLabel}</a>` : ""}
+            ${hasGallery ? `<button class="btn btn-gallery" data-project="${project.id}"><i class="fas fa-images"></i> ${galleryLabel}</button>` : ""}
+          </div>
+        </div>
+      `
+      featuredGrid.appendChild(card)
+    })
   }
   
